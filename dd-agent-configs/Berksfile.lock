@@ -1,0 +1,7 @@
+DEPENDENCIES
+  dd-agent-configs
+    path: .
+    metadata: true
+
+GRAPH
+  dd-agent-configs (0.1.0)

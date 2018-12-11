@@ -1,0 +1,9 @@
+---
+username: kitchen
+ssh_key: "/Users/jasonmeredith/code/frt-opsworks-cookbooks/dd-agent-configs/.kitchen/docker_id_rsa"
+image_id: 9f77f42e0a71
+container_id: 93d8e50f592d8e9516f724830bbb6af7e9ec60e3a063dd81e32fb69c106c76ee
+hostname: localhost
+port: 32768
+last_action: setup
+last_error: Kitchen::ActionFailed
