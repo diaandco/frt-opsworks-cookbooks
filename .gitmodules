@@ -10,6 +10,7 @@
 [submodule "datadog"]
 	path = datadog
 	url = https://github.com/DataDog/chef-datadog.git
+	branch = agent6-amazon-linux
 [submodule "apt"]
 	path = apt
 	url = https://github.com/opscode-cookbooks/apt.git
