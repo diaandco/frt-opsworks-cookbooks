@@ -1,11 +1,11 @@
 if node['dd-agent-configs']['rails']['installed']
-    directory '/etc/dd-agent/conf.d/rails' do
+    directory File.join(node['datadog']['agent6_config_dir'], 'conf.d/rails.d') do
         owner 'dd-agent'
         group 'dd-agent'
         mode '0755'
         action :create
     end
-    template '/etc/dd-agent/conf.d/rails/conf.yaml' do
+    template File.join(node['datadog']['agent6_config_dir'], 'conf.d/rails.d/conf.yaml') do
         source 'rails.yaml.erb'
         owner 'dd-agent'
         group 'dd-agent'
@@ -15,13 +15,13 @@ if node['dd-agent-configs']['rails']['installed']
 end
 
 if node['dd-agent-configs']['sidekiq']['installed']
-    directory '/etc/dd-agent/conf.d/sidekiq' do
+    directory File.join(node['datadog']['agent6_config_dir'], 'conf.d/sidekiq.d') do
         owner 'dd-agent'
         group 'dd-agent'
         mode '0755'
         action :create
     end
-    template '/etc/dd-agent/conf.d/sidekiq/conf.yaml' do
+    template File.join(node['datadog']['agent6_config_dir'], 'conf.d/sidekiq.d/conf.yaml') do
         source 'sidekiq.yaml.erb'
         owner 'dd-agent'
         group 'dd-agent'
@@ -31,13 +31,13 @@ if node['dd-agent-configs']['sidekiq']['installed']
 end
 
 if node['dd-agent-configs']['whenever']['installed']
-    directory '/etc/dd-agent/conf.d/whenever' do
+    directory File.join(node['datadog']['agent6_config_dir'], 'conf.d/whenever.d') do
         owner 'dd-agent'
         group 'dd-agent'
         mode '0755'
         action :create
     end
-    template '/etc/dd-agent/conf.d/whenever/conf.yaml' do
+    template File.join(node['datadog']['agent6_config_dir'], 'conf.d/whenever.d/conf.yaml') do
         source 'whenever.yaml.erb'
         owner 'dd-agent'
         group 'dd-agent'
