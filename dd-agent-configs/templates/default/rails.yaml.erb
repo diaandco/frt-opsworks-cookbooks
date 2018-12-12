@@ -1,5 +1,1 @@
-logs:
-  - type: file
-    path: <%= node['dd-agent-configs']['rails']['log'] %>
-    service: rails
-    source: ruby
+<%= JSON.parse(({'logs' => node['dd-agent-configs']['rails']['logs'] }).to_json).to_yaml %>
