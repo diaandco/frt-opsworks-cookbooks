@@ -18,3 +18,4 @@ chef_version '>= 10.14' if respond_to? :chef_version
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/dd-agent-configs'
+depends 'datadog'

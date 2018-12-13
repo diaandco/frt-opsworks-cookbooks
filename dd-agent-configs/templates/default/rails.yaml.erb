@@ -1,1 +1,1 @@
-<%= JSON.parse(({'logs' => node['dd-agent-configs']['rails']['logs'] }).to_json).to_yaml %>
+<%= JSON.parse(({'logs' => @vars['logs'] }).to_json).to_yaml %>
