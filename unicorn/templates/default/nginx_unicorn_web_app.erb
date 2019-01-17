@@ -65,7 +65,7 @@ server {
 
     # Rewrite everything to HTTPS. Except for the health_check.
     if ($http_x_forwarded_proto != 'https') {
-      rewrite ^((?!/health_check).) $https_forward permanent;
+      rewrite ^((?!/ping).) $https_forward permanent;
     }
     <% end %>
 
