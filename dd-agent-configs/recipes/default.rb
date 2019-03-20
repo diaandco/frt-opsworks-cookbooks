@@ -7,11 +7,7 @@ group 'nginx' do
   append	true
 end
 
-begin
-  ddconfig = node['deploy']["dd-agent-configs"]
-rescue NoMethodError => e
-  ddconfig = node['dd-agent-configs']
-end
+ddconfig = node['dd-agent-configs'] || node.dig('deploy', 'dd-agent-configs')
 
 begin
   unless node['datadog']['agent6_config_dir'].nil? then
@@ -19,7 +15,7 @@ begin
   else
     ddbasedir = "/etc/datadog-agent"
   end
-rescue 
+rescue
   ddbasedir = "/etc/datadog-agent"
 end
 
